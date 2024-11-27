@@ -1,0 +1,69 @@
+def display_menu():
+    """
+    Display the main menu for the Glamping Side Quest.
+    """
+    print("\n=== Welcome to Glamping Side Quest ===")
+    print("1. Set up a camp")
+    print("2. Start a fire")
+    print("3. Cook a chicken")
+    print("4. View your score")
+    print("5. Exit")
+    print("=======================================")
+
+
+def set_up_camp():
+    """
+    Simulates setting up a camp.
+    """
+    print("\nYou are setting up your camp...")
+    # Add more logic here for choosing items, scoring, etc.
+    print("Camp setup complete! +10 points.")
+    return 10
+
+
+def start_fire():
+    """
+    Simulates starting a fire.
+    """
+    print("\nYou are starting a fire...")
+    # Add random chance logic here.
+    print("Fire started successfully! +5 points.")
+    return 5
+
+
+def cook_chicken():
+    """
+    Simulates cooking a chicken.
+    """
+    print("\nYou are cooking a chicken...")
+    # Add logic for undercooked/burnt/perfectly cooked chicken.
+    print("Chicken cooked perfectly! +20 points.")
+    return 20
+
+
+def main():
+    """
+    Main game loop.
+    """
+    total_score = 0
+    while True:
+        display_menu()
+        choice = input("Choose an option (1-5): ")
+
+        if choice == "1":
+            total_score += set_up_camp()
+        elif choice == "2":
+            total_score += start_fire()
+        elif choice == "3":
+            total_score += cook_chicken()
+        elif choice == "4":
+            print(f"\nYour current score is: {total_score}")
+        elif choice == "5":
+            print("\nThank you for playing! Final score:", total_score)
+            break
+        else:
+            print("\nInvalid choice. Please try again.")
+
+# Run the game
+if __name__ == "__main__":
+    main()
