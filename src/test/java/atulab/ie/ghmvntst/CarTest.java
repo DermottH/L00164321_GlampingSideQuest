@@ -18,7 +18,7 @@ class CarTest {
 	@Test
 	void testGetDoors() {
 		atulab.ie.ghmvntst.Car car = new Car();
-		car.setDoors(1)
+		car.setDoors(1);
 		int j = car.getDoors();
 		assertEquals(1,j);
 	}
@@ -29,7 +29,7 @@ class CarTest {
 	@Test
 	void testSetDoors() {
 		atulab.ie.ghmvntst.Car car = new Car();
-		car.setDoors(0)
+		car.setDoors(0);
 		int j = car.getDoors();
 		assertEquals(0,j);
 	}
