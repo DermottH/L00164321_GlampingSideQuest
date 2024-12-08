@@ -27,7 +27,7 @@ jobs:
       run: mvn clean javadoc:javadoc
 
     - name: List files in target/site directory
-      run: ls -R target/site  # Debug step to verify if apidocs is generated
+      run: ls -R target
 
     - name: Upload Javadoc as artifact
       uses: actions/upload-artifact@v4  # Updated to v4
