@@ -26,11 +26,11 @@ jobs:
     - name: Generate Javadoc
       run: mvn clean javadoc:javadoc
 
-    - name: List files in target directory
-      run: ls -R target
+    - name: List files in target/site directory
+      run: ls -R target/site  # Debug step to verify if apidocs is generated
 
     - name: Upload Javadoc as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # Updated to v4
       with:
         name: javadoc
-        path: target/
+        path: target/site/apidocs  # Ensure this path is correct
