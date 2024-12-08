@@ -30,6 +30,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Test App
       run: mvn test -Dtest=atulab.ie.ghglamptst.AppTest
+
     - name: Test for setting up a camp
       run: mvn test -Dtest=atulab.ie.ghglamptst.testSetUpCamp
     - name: Fast for starting a fire.
