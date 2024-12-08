@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v4  # Updated to v4
       with:
         name: javadoc
-        path: target/site/apidocs  # Ensure this path is correct
+        path: target/
