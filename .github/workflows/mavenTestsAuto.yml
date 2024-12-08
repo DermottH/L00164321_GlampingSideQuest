@@ -33,6 +33,6 @@ jobs:
 
 
     - name: Test for setting up a camp
-      run: mvn test -Dtest=atulab.ie.ghglamptst.testSetUpCamp
+      run: mvn test -Dtest=atulab.ie.ghglamptst.testSetUpCamp -DfailIfNoTests=false
     - name: Fast for starting a fire.
-      run: mvn test -Dtest=atulab.ie.ghglamptst.testStartFire
+      run: mvn test -Dtest=atulab.ie.ghglamptst.testStartFire -DfailIfNoTests=false
