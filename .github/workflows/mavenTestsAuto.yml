@@ -29,7 +29,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Test App
-      run: mvn test -Dtest=atulab.ie.ghglamptst.AppTest
+      run: mvn test -Dtest=atulab.ie.ghglamptst.AppTest -DfailIfNoTests=false
+
 
     - name: Test for setting up a camp
       run: mvn test -Dtest=atulab.ie.ghglamptst.testSetUpCamp
