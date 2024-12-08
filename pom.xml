@@ -44,9 +44,7 @@
         <configuration>
           <!-- Make sure Surefire runs all test classes ending in Test -->
           <includes>
-            <include>**/AppTest.java</include>
-                  <include>**/CarTest.java</include>
-             <include>**/FastTest.java</include>
+                   <include>**/*Test.java</include> <!-- Ensures all classes ending with Test.java are picked up -->
           </includes>
         </configuration>
       </plugin>
