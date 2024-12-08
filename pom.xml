@@ -30,7 +30,15 @@
       <!-- Use a newer version of Maven Compiler Plugin and set release -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>       
         <artifactId>maven-compiler-plugin</artifactId>
+               <executions>
+        <execution>
+          <goals>
+            <goal>javadoc</goal> <!-- Generate Javadoc -->
+          </goals>
+        </execution>
+      </executions>
         <version>3.8.1</version>
         <configuration>
           <release>17</release>
