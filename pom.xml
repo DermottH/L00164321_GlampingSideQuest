@@ -13,7 +13,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- Remove old source/target and rely on 'release' -->
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -27,13 +28,24 @@
 
   <build>
     <plugins>
-      <!-- Use a newer version of Maven Compiler Plugin and set release -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
           <release>17</release>
+        </configuration>
+      </plugin>
+      <!-- Add the Surefire Plugin to run tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version> <!-- Using a newer version for better JUnit 3 support -->
+        <configuration>
+          <!-- Make sure Surefire runs all test classes ending in Test -->
+          <includes>
+                   <include>**/*Test.java</include> <!-- Ensures all classes ending with Test.java are picked up -->
+          </includes>
         </configuration>
       </plugin>
     </plugins>
