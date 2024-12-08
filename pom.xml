@@ -13,7 +13,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- Remove old source/target and rely on 'release' -->
   </properties>
 
   <dependencies>
@@ -27,7 +26,7 @@
 
   <build>
     <plugins>
-      <!-- Use a newer version of Maven Compiler Plugin and set release -->
+      <!-- Maven Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -35,6 +34,20 @@
         <configuration>
           <release>17</release>
         </configuration>
+      </plugin>
+
+      <!-- Maven Javadoc Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.3.0</version> <!-- Or latest version -->
+        <executions>
+          <execution>
+            <goals>
+              <goal>javadoc</goal> <!-- Generate Javadoc -->
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
